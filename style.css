@@ -12,19 +12,21 @@ body{
     justify-content: center;
     min-height: 95vh;
     background-color:#927DFC;
+    overflow: hidden;
 }
 .info{
     color: #fff;
     margin-top: 50px;
 }
 .wrapper{
-    width: 460px;
+    width: 488px;
     height: 288px;
     padding:30px;
     border-radius: 5px;
     background-color: #fff;
     transition:height 0.2s ease;
 }
+
 img{
     display: none;
 }
@@ -35,7 +37,7 @@ img{
     display: block;
 }
 .wrapper.active{
-    height:537px;
+    height:570px;
 }
 .wrapper.active i{
     display: none;
@@ -96,7 +98,7 @@ img{
     width:calc(100% / 2 - 15px);
 }
 .row .column label{
-    font-size: 1.06rem;
+    font-size: 1rem;
 }
 .sizes .column input{
     width: 100%;
@@ -119,12 +121,26 @@ img{
     display: flex;
     align-items: center;
 }
-.checkboxes .column input{
+.checkboxes .column.ratio input{
     width:17px;
     height:17px;
     margin-right:8px;
     accent-color: #927DFC;
 }
+
+/* .checkboxes .column.qulity input{
+    width:100%;
+    margin-right:8px;
+    outline: none;
+    border:none;
+    color: #927DFC;
+} */
+.slider{
+    accent-color: #927DFC;
+    border: none;
+    outline: none;
+}
+
 .content .download-btn{
     width: 47%;
     outline: none;

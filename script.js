@@ -5,7 +5,18 @@ widthInput = document.querySelector(".width input"),
 heightInput = document.querySelector(".height input"),
 ratioInput = document.querySelector(".ratio input"),
 qualityInput=document.querySelector(".quality input"),
-downloadBtn = document.querySelector(".download-btn");
+downloadBtn = document.querySelector(".download-btn"),
+percenVal=document.querySelector("#output");
+
+
+//getting the slider percentage and showing on screen
+var slider = document.getElementById("quality");
+var value= document.getElementById("output");
+value.innerHTML=slider.value;
+slider.oninput = function() {
+    value.innerHTML = this.value;
+  }
+
 
 let ogImageRatio;
 
@@ -39,7 +50,8 @@ const resizeAndDownload = () => {
     const ctx = canvas.getContext("2d");
     // if quality checkbox is checked, pass 0.7 to imgQuality else pass 1.0
     // 1.0 is 100% quality where 0.7 is 70% of total. you can pass from 0.1 - 1.0
-    const imgQuality=qualityInput.checked ? 0.7 : 1.0
+    //const imgQuality=qualityInput.checked ? 0.7 : 1.0
+    const imgQuality=percenVal*100;
     // setting canvas height & width according to the input values
     canvas.width = widthInput.value;
     canvas.height = heightInput.value;

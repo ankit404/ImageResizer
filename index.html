@@ -34,8 +34,11 @@
                 <label for="ratio">Lock Aspect Ratio</label>
             </div>
             <div class="column quality">
-                <input type="checkbox" id="quality">
-                <label for="quality">Reduce Quality</label>
+                <!-- <input type="checkbox" id="quality"> -->
+                <label for="quality">Reduce Quality by <span id="output"></span>%</label>
+                <!-- <p id="output"><p>%</p></p> -->
+                <input type="range" min="1" max="100" value="50" class="slider" id="quality" >
+               
             </div>
         </div>
         <div class="btn">
